@@ -1,0 +1,9 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /contestants/top/:teamSize     @info.andyroo.esl.topcontestants.controllers.Application.getTopContestants(teamSize: Int)
+GET     /contestants/top/:teamSize/     @info.andyroo.esl.topcontestants.controllers.Application.getTopContestants(teamSize: Int)
+
+    

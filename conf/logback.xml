@@ -1,0 +1,22 @@
+<configuration>
+
+    <conversionRule conversionWord="coloredLevel" converterClass="play.api.Logger$ColoredLevel" />
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%yellow(%date{ISO8601}) %thread |%highlight(%-5level)| [%green(%X{akkaSource})] %cyan(%logger{36}) - %highlight(%msg%n%ex{full})</pattern>
+            <!--<pattern>%coloredLevel %logger{15} - %message%n%xException{5}</pattern>-->
+        </encoder>
+    </appender>
+
+    <logger name="play" level="INFO" />
+    <logger name="application" level="DEBUG" />
+
+    <!--Application Loggers-->
+    <logger name="info.andyroo.esl" level="DEBUG" />
+
+    <root level="ERROR">
+        <appender-ref ref="STDOUT" />
+    </root>
+
+</configuration>
